@@ -36,7 +36,7 @@ export default function RecipeEdit({ recipe }) {
   }
 
   return (
-    <div className="recipe-edit">
+    <div className="recipe-edit" style={{ margin: "6px 0" }}>
       <button
         className="btn btn--primary"
         style={{ fontSize: ".8em", marginLeft: "auto" }}

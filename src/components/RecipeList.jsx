@@ -8,10 +8,7 @@ export default function RecipeList({ recipes }) {
     <div className="recipe-list">
       <div className="header__container">
         <h1>RecipeLand</h1>
-        <button
-          className="btn btn--positive mt-1 mr-1"
-          onClick={handleRecipeAdd}
-        >
+        <button className="btn btn--positive mr-1" onClick={handleRecipeAdd}>
           Add Recipe
         </button>
       </div>
