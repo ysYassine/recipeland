@@ -1,0 +1,28 @@
+.recipe-list {
+  min-height: 100vh;
+  width: 50%;
+  border-right: 1px solid black;
+}
+
+.add-recipe-btn__container {
+  background-color: white;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 10px 10px 0;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px dashed gray;
+}
+
+.recipe__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 740px) {
+  .recipe-list {
+    width: 100%;
+    border: none;
+  }
+}
