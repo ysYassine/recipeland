@@ -76,7 +76,7 @@ export default function RecipeEdit({ recipe }) {
         <input
           className="recipe-edit__input"
           type="number"
-          min={1}
+          min={0}
           name="servings"
           id="servings"
           value={recipe.servings}
