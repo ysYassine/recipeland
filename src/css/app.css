@@ -40,20 +40,30 @@ body {
   font-weight: bold;
   padding: 5px 10px;
   font-size: inherit;
-}
-
-.btn--primary {
-  background-color: #2573c2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background-color 0.3s ease-in-out;
 }
 
+.btn--primary {
+  background-color: #e99300;
+}
+
 .btn--primary:hover {
+  background-color: #fbb540;
+}
+
+.btn--positive {
+  background-color: #2573c2;
+}
+
+.btn--positive:hover {
   background-color: #2f8cbb;
 }
 
 .btn--danger {
   background-color: #b12c2e;
-  transition: background-color 0.3s ease-in-out;
 }
 
 .btn--danger:hover {

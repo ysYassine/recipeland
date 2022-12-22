@@ -9,7 +9,7 @@ export default function RecipeList({ recipes }) {
       <div className="header__container">
         <h1>RecipeLand</h1>
         <button
-          className="btn btn--primary mt-1 mr-1"
+          className="btn btn--positive mt-1 mr-1"
           onClick={handleRecipeAdd}
         >
           Add Recipe

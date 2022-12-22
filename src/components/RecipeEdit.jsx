@@ -37,15 +37,13 @@ export default function RecipeEdit({ recipe }) {
 
   return (
     <div className="recipe-edit">
-      <div style={{ textAlign: "right" }}>
-        <button
-          className="btn btn--primary"
-          style={{ fontSize: ".8em" }}
-          onClick={() => handleRecipeSelect()}
-        >
-          Close
-        </button>
-      </div>
+      <button
+        className="btn btn--primary"
+        style={{ fontSize: ".8em", marginLeft: "auto" }}
+        onClick={() => handleRecipeSelect()}
+      >
+        Close
+      </button>
       <div className="recipe-edit__details-grid">
         <label className="recipe-edit__label" htmlFor="name">
           Name
@@ -112,11 +110,13 @@ export default function RecipeEdit({ recipe }) {
         ))}
       </div>
       <br />
-      <div style={{ textAlign: "center" }}>
-        <button className="btn btn--primary" onClick={handleIngredientAdd}>
-          Add Ingredients
-        </button>
-      </div>
+      <button
+        className="btn btn--positive"
+        onClick={handleIngredientAdd}
+        style={{ margin: "auto" }}
+      >
+        Add Ingredients
+      </button>
     </div>
   );
 }
