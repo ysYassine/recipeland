@@ -22,7 +22,7 @@
 .header__container h1,
 .header__container i {
   color: white;
-  text-shadow: 0 0 7px #fff, 0 0 20px #f1024d, 0 0 30px #f1024d;
+  text-shadow: 0 0 7px #f1024d, 0 0 20px;
   font-size: 1.8em;
 }
 
