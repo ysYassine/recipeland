@@ -3,6 +3,28 @@ import { useContext } from "react";
 import { RecipeContext } from "./App";
 import { v4 as uuidv4 } from "uuid";
 
+function LabelWithIcon({ icon, title, htmlFor }) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "flex-start",
+        justifyContent: "flex-start",
+        gap: "10px",
+      }}
+    >
+      <i className={icon} style={{ fontSize: "22px" }} />
+      <label
+        style={{ fontWeight: "bold" }}
+        htmlFor={htmlFor}
+        className="recipe__row__name"
+      >
+        {title}
+      </label>
+    </div>
+  );
+}
+
 export default function RecipeEdit({ recipe }) {
   const { handleRecipeSelect, handleRecipeChange } = useContext(RecipeContext);
 
@@ -39,15 +61,13 @@ export default function RecipeEdit({ recipe }) {
     <div className="recipe-edit">
       <button
         className="btn btn--primary"
-        style={{ fontSize: ".8em", marginLeft: "auto" }}
+        style={{ marginLeft: "auto" }}
         onClick={() => handleRecipeSelect()}
       >
         Close
       </button>
       <div className="recipe-edit__details-grid">
-        <label className="recipe-edit__label" htmlFor="name">
-          Name
-        </label>
+        <LabelWithIcon icon="bx bx-bowl-hot" title="Name" htmlFor="name" />
         <input
           className="recipe-edit__input"
           type="text"
@@ -57,9 +77,11 @@ export default function RecipeEdit({ recipe }) {
           autoFocus={window.screen.width > 740 ? true : false}
           onChange={(e) => handleChange({ name: e.target.value })}
         />
-        <label className="recipe-edit__label" htmlFor="cook-time">
-          Cook Time
-        </label>
+        <LabelWithIcon
+          icon="bx bx-time-five"
+          title="Cook Time"
+          htmlFor="cook-time"
+        />
         <input
           className="recipe-edit__input"
           type="text"
@@ -68,9 +90,7 @@ export default function RecipeEdit({ recipe }) {
           value={recipe.cookTime}
           onChange={(e) => handleChange({ cookTime: e.target.value })}
         />
-        <label className="recipe-edit__label" htmlFor="servings">
-          Servings
-        </label>
+        <LabelWithIcon icon="bx bx-group" title="Servings" htmlFor="servings" />
         <input
           className="recipe-edit__input"
           type="number"
@@ -79,12 +99,14 @@ export default function RecipeEdit({ recipe }) {
           id="servings"
           value={recipe.servings}
           onChange={(e) =>
-            handleChange({ servings: parseInt(e.target.value || 1) })
+            handleChange({ servings: parseInt(e.target.value || 0) })
           }
         />
-        <label className="recipe-edit__label" htmlFor="instructions">
-          Instructions
-        </label>
+        <LabelWithIcon
+          icon="bx bx-book-content"
+          title="Instructions"
+          htmlFor="instructions"
+        />
         <textarea
           className="recipe-edit__input"
           name="instructions"
@@ -94,8 +116,7 @@ export default function RecipeEdit({ recipe }) {
         />
       </div>
       <br />
-      <label className="recipe-edit__label">Ingredients</label>
-      <br />
+      <LabelWithIcon icon="bx bx-bookmark-alt-minus" title="Ingredients" />
       <div className="recipe-edit__ingredients-grid">
         <label>Name</label>
         <label>Amount</label>

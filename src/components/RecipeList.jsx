@@ -7,7 +7,17 @@ export default function RecipeList({ recipes }) {
   return (
     <div className="recipe-list">
       <div className="header__container">
-        <h1>RecipeLand</h1>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "6px",
+          }}
+        >
+          <i className="bx bxs-book" />
+          <h1>RecipeLand</h1>
+        </div>
         <button className="btn btn--positive mr-1" onClick={handleRecipeAdd}>
           Add Recipe
         </button>

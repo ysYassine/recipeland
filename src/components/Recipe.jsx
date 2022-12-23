@@ -2,13 +2,46 @@ import React, { useContext } from "react";
 import IngredientsList from "./IngredientsList";
 import { RecipeContext } from "./App";
 
+function H3TitleWithIcon({ icon, title, children }) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "10px",
+      }}
+    >
+      <i className={icon} style={{ fontSize: "30px" }} />
+      <h3 className="recipe__header-name">{title}</h3>
+    </div>
+  );
+}
+
+function TitleWithIcon({ icon, title, value }) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        gap: "10px",
+      }}
+    >
+      <i className={icon} style={{ fontSize: "22px" }} />
+      <span style={{ fontWeight: "bold" }}>{title}</span>
+      {value && <span className="recipe__row__value">{value}</span>}
+    </div>
+  );
+}
+
 export default function Recipe(props) {
   const { id, name, cookTime, servings, instructions, ingredients } = props;
   const { handleRecipeDelete, handleRecipeSelect } = useContext(RecipeContext);
   return (
     <div className="recipe">
       <div className="recipe__header">
-        <h3 className="recipe__header-name">{name}</h3>
+        <H3TitleWithIcon icon="bx bx-bowl-hot" title={name} />
         <div style={{ display: "flex", gap: "6px" }}>
           <button
             className="btn btn--primary mr-1"
@@ -25,21 +58,23 @@ export default function Recipe(props) {
         </div>
       </div>
       <div className="recipe__row">
-        <span className="recipe__row__name">Cook Time:</span>
-        <span className="recipe__row__value">{cookTime}</span>
+        <TitleWithIcon
+          icon="bx bx-time-five"
+          title="Cook Time:"
+          value={cookTime}
+        />
       </div>
       <div className="recipe__row">
-        <span className="recipe__row__name">Servings:</span>
-        <span className="recipe__row__value">{servings}</span>
+        <TitleWithIcon icon="bx bx-group" title="Servings:" value={servings} />
       </div>
       <div className="recipe__row">
-        <span className="recipe__row__name">Instructions:</span>
+        <TitleWithIcon icon="bx bx-book-content" title="Instructions:" />
         <div className="recipe__row__value recipe__instructions">
           {instructions}
         </div>
       </div>
       <div className="recipe__row">
-        <span className="recipe__row__name">Ingredients:</span>
+        <TitleWithIcon icon="bx bx-bookmark-alt-minus" title="Ingredients:" />
         <div className="recipe__row__value">
           <IngredientsList ingredients={ingredients} />
         </div>
