@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import IngredientsList from "./IngredientsList";
 import { RecipeContext } from "./App";
 
-function H3TitleWithIcon({ icon, title, children }) {
+function H3TitleWithIcon({ icon, title }) {
   return (
     <div
       style={{

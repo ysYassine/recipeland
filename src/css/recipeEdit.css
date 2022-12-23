@@ -55,8 +55,9 @@ textarea.recipe-edit__input {
   height: 100px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1110px) {
   .recipe-edit__details-grid {
+    grid-template-columns: 1fr;
     column-gap: 20px;
   }
   .recipe-edit__ingredients-grid {
@@ -66,6 +67,13 @@ textarea.recipe-edit__input {
 }
 
 @media (max-width: 840px) {
+  .recipe-edit__details-grid {
+    column-gap: 14px;
+    row-gap: 14px;
+  }
+  .recipe-edit__ingredients-grid {
+    column-gap: 14px;
+  }
   .recipe-edit {
     background-color: white;
     width: 100%;
