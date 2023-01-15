@@ -94,34 +94,29 @@ function App() {
 const sampleRecipes = [
   {
     id: 1,
-    name: "Salad Pasta Farfella",
-    servings: 2,
-    cookTime: "1:45",
-    instructions:
-      '1. Cut Escalope into little pieces \n2.Cut pepper \n3.Cut onion & tomato into small pieces\n4.Cut garlic\n5.Mix all and add oil, water and "Korkob"',
-    ingredients: [
-      { id: 1, name: "Escalope", amount: "x2 pieces" },
-      { id: 2, name: "Salad Peper", amount: "x2" },
-      { id: 3, name: "Chilli Peper", amount: "x1" },
-      { id: 4, name: "Tomato", amount: "x1" },
-      { id: 5, name: "Onion", amount: "1/2" },
-      { id: 6, name: "Garlic", amount: "x2 small" },
-      { id: 7, name: "Korkob", amount: "1 Tbs" },
-      { id: 8, name: "Oil", amount: "x6 Spoons" },
-    ],
-  },
-  {
-    id: 3,
     name: "Crêpe",
     servings: 6,
     cookTime: "0:45",
-    instructions: "1. Mix\n2.Mix again",
+    instructions: "- Mix\n- Mix again",
     ingredients: [
       { id: 1, name: "Plain flour", amount: "250g" },
       { id: 2, name: "Milk", amount: "0.5L" },
       { id: 3, name: "Vanilla sugar", amount: "8g" },
       { id: 4, name: "Eggs", amount: "x3" },
       { id: 5, name: "Oil", amount: "2Tbs" },
+    ],
+  },
+  {
+    id: 2,
+    name: "Omlette",
+    servings: 1,
+    cookTime: "0:10",
+    instructions: "- Mix",
+    ingredients: [
+      { id: 1, name: "Eggs", amount: "x2" },
+      { id: 2, name: "Oignon", amount: "Small pieces" },
+      { id: 3, name: "Pepper", amount: "Small pieces" },
+      { id: 4, name: "Tomato", amount: "Small pieces" },
     ],
   },
 ];
